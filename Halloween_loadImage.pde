@@ -3,22 +3,23 @@
 PImage img;
 
 void setup() {
-  size(800, 500);
-  img = loadImage("pumpkins.png");
-  image(img, 0, 0);
+ 
+  size(1000,1000);
+  img = loadImage("Pumpkins.png");
+  image(img, 0, 80,width/1.00001,height/1.00001);
+  textSize(40);
+  textAlign(CENTER);
+  text("TRICK OR TREAT",500,40);
 }
 
-void draw() 
+void draw()
 {
-  save("YOURNAME.Halloween.png");
 }
 
 void mouseDragged()
 {
-  //"Carves" the pumpkins
-  //blendMode optional, might be problematic with a light or white background
-  blendMode(OVERLAY); 
+  blendMode(OVERLAY);
   noStroke();
-  fill(255, 200, 25);
-  ellipse(mouseX, mouseY, 5, 5);
+  fill(188,0,0);
+  ellipse(mouseX,mouseY,10,10);
 }
